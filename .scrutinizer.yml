@@ -3,11 +3,11 @@ build:
         node: '5.1.0'
     dependencies:
         after:
-            - npm install jscs
+            - npm install jshint
     tests:
         override: 
             -
-                command: './node_modules/jscs/bin/jscs . --reporter=json  > jscs-data'
+                command: './node_modules/.bin/jshint ./ --checkstyle-reporter > jshint-data'
                 analysis:
-                    file: 'jscs-data'
-                    format: 'jscs-json'
+                    file: 'jshint-data'
+                    format: 'jshint-checkstyle'
