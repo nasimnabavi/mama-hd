@@ -1,3 +1,5 @@
+checks:
+    javascript: true
 build:
     environment:
         node: '5.1.0'
