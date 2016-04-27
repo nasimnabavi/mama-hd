@@ -3,11 +3,13 @@ build:
         node: '5.1.0'
     dependencies:
         after:
-            - npm install jshint
+            - npm install eslint@2.2.0
+            - npm install eslint-plugin-react
+            - npm install babel-eslint
     tests:
         override: 
             -
-                command: './node_modules/.bin/jshint ./ --checkstyle-reporter > jshint-data'
+                command: './node_modules/.bin/eslint ./ --format checkstyle --output-file eslint-data'
                 analysis:
-                    file: 'jshint-data'
-                    format: 'jshint-checkstyle'
+                    file: 'eslint-data'
+                    format: 'eslint-checkstyle'
