@@ -86,7 +86,7 @@ cmd.testBuggy2Buf = () => {
 	}).then(res => {
 	})
 }
-
+module.exports.testUrl = url => url.match('bilibili.com/')
 cmd.testBuggy2Play = () => {
 	cmd.ctrl = playVideo({
 		src:[
