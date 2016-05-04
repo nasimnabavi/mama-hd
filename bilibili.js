@@ -26,3 +26,5 @@ module.exports.getVideos = function (url) {
 	});
 }
 
+module.exports.testUrl = url => url.match('bilibili.com/')
+
